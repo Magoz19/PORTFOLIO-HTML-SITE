@@ -1,0 +1,142 @@
+/* Master Styles */
+body {
+    margin: 0px;
+    font-family: sans-serif, Arial, Helvetica;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+/* Nav Styles */
+.nav-wrapper  {
+    display: flex;
+    justify-content: space-between;
+    padding: 38px;
+}  
+.left-side {
+    display: flex;
+}
+.nav-wrapper > .left-side > div {
+    display: flex;
+    margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+.nav-link-wrapper {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+.nav-link-wrapper a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+.nav-link-wrapper:hover {
+    border-bottom: 1px solid black;
+}
+.nav-link-wrapper a:hover {
+    color: black;
+}
+
+/* Portfolio Styles */
+
+.portfolio-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.portfolio-item-wrapper {
+    position: relative;
+}
+.portfolio-img-background {
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.img-text-wrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.logo-wrapper img {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+/* Needs to be more specific with selector */
+.img-text-wrapper .subtitle {
+    transition: 1s;
+    font-weight: 600;
+    color: transparent;
+
+}
+.img-text-wrapper:hover .subtitle {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: lightseagreen;
+}
+.img-darken {
+    transition: 1s;
+    filter: brightness(10%);
+}
+.two-column-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+}
+
+.profile-img-wrapper img {
+    width: 99%;
+    height: 100%;
+    background-size: cover;
+    border: 2px solid rgb(236, 232, 232);
+    border-radius: 10px;
+    opacity: .7;
+}
+.profile-content-wrapper {
+    padding: 30px;
+}
+.profile-content-wrapper h1 {
+    color: lightseagreen;
+}
+
+/* Mobile Tablet view responsiveness */
+@media only screen and (min-width: 248px) {
+    .portfolio-items-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .two-column-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        position: relative;
+    }
+    
+}
+@media only screen and (min-width: 600px) {
+    .portfolio-items-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .portfolio-items-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .two-column-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: relative;
+    }
+    
+}
